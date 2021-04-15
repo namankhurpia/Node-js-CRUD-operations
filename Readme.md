@@ -27,7 +27,7 @@ WINDOWS -
 https://www.mongodb.com/try/download/compass
 ```
 
-5. Edit database.config.js - place your collection URL there, right now it is my database, feel free to throw in some stuff, I'll read
+5. Edit database.config.js - place your collection URL there, right now my db URL is in place, feel free to throw in some stuff, I'll read
 
 6. Run Server
 

@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "1d42678b-7c5a-4e43-90c7-6a9565e98f7d",
+		"name": "Notesapp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "HOME PAGE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				},
+				"description": "home page - GET request\n"
+			},
+			"response": []
+		},
+		{
+			"name": "ADD A NOTE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"my first note\",\n    \"content\":\"Upload DSA lab by Saturday\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"notes"
+					]
+				},
+				"description": "endpoint to add notes - POST"
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL NOTES",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"notes"
+					]
+				},
+				"description": "Get all Notes - GET request"
+			},
+			"response": []
+		},
+		{
+			"name": "EDIT NOTE with noteid",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"my first note\",\n    \"content\":\"Upload DBMS lab by Saturday\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/notes/6078885dc1b77611072b40c6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"notes",
+						"6078885dc1b77611072b40c6"
+					]
+				},
+				"description": "Get any particular note by using ID in URL(parameter)- GET request"
+			},
+			"response": []
+		},
+		{
+			"name": "GET ONE NOTE WITH NOTEID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/notes/6078885dc1b77611072b40c6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"notes",
+						"6078885dc1b77611072b40c6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE NOTE WITH NOTE ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/notes/6078885dc1b77611072b40c6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"notes",
+						"6078885dc1b77611072b40c6"
+					]
+				},
+				"description": "Delete any note by using note id"
+			},
+			"response": []
+		}
+	]
+}
